@@ -29,7 +29,6 @@ let monObjet={
     valeur:10
 };
 
-
 app.get('/',(req, res, next)=>{
    // res.sendFile('www/index.html');
    res.render('index.ejs', {monObjet : monObjet});
@@ -47,6 +46,19 @@ app.get('/page2',(req, res, next)=>{
   app.get('/correction',(req, res, next)=>{
    res.render('correction.ejs');
 });
+
+  //Ajout de la page questions
+  app.get('/questions',(req, res, next)=>{
+   res.render('questions.ejs');
+});
+
+app.post('/questions',(req,res,next)=>{ //url que l'on tape 
+   console.log(req.body.q11);
+   console.log(req.body.q12);
+   console.log(req.body.q13);
+   console.log(req.body.q14);
+   res.redirect('/questions');
+})
 
  app.use((req, res, next)=>{
     res.status(404).render('error.ejs');
