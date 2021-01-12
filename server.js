@@ -27,7 +27,7 @@ app.listen(port,()=>{
 
 app.get('/',(req, res, next)=>{
    // res.sendFile('www/index.html');
-   res.render('index.ejs', {monObjet : monObjet});
+   res.render('index.ejs');
 });
 
 app.get('/page2',(req, res, next)=>{
