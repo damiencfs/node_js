@@ -1,24 +1,65 @@
 <%- include('header');%>
 
+
 <script>
 
-    class Joueur {
+  /*  class Joueur {
         constructor(nom){
             this.nom = nom;
             this.score=0;
         }
     }
 
-let jeu= {
-    questions : ["Qui était le dieu de la guerre dans la mythologie grecque ?",
+
+let questions = ["Qui était le dieu de la guerre dans la mythologie grecque ?",
             "Quel acteur américain incarne le héros du film de Christopher Nolan de 2014 « Interstellar » ?",
-            "Quel animal est « pan-pan » dans Bambi ?",
-            ],
-    reponses=["Arès",
+            "Quel animal est « pan-pan » dans Bambi ?"
+            ];
+
+let  propositions = [
+    "A)Arès B)Hadès C)Hermès D)Apollon",
+    "A)Léonardo DiCaprio B)Brad Pitt C)Matthew MacConaughey D)Tom Cruise",
+    "A)Un chien B)Un cerf C)Un oiseau D)Un lapin"
+    ];
+
+ let reponses = ["Arès",
             "Matthew MacConaughey",
-            "Un lapin"]
-}
-
-
+            "Un lapin"];
+*/
 </script>
+<section class="question">
+    <p><%=questions[0] %></p>
+    <select>
+        <option value="1"> A) Arès</option>
+        <option value="0"> B) Hadès</option>
+        <option value="0"> C) Hermès</option>
+        <option value="0"> D) Apollon</option>
+    </select>
+
+</section>
+<br/>
+<section class="question">
+    <p><%=questions[1] %></p>
+    <select>
+        <option value="0"> A)Léonardo DiCaprio</option>
+        <option value="0"> B)Brad Pitt</option>
+        <option value="1"> C)Matthew MacConaughey</option>
+        <option value="0"> D)Tom Cruise</option>
+    </select>
+</section>
+<br/>
+<section class="question">
+    <p><%=questions[2] %></p>
+    <select>
+        <option value="0"> A)Un chien</option>
+        <option value="0"> B)Un cerf</option>
+        <option value="0"> C)Un oiseau</option>
+        <option value="1"> D)Un lapin</option>
+    </select>
+</section>
+<br/>
+<section>
+    <input type="submit" value="Répondre" id="repondre">
+</section>
+
 <%- include('footer');%>

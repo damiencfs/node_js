@@ -24,15 +24,32 @@ app.listen(port,()=>{
     console.log(`Serveur listening at http://localhost:${port}`);
 })
 
-let monObjet={
-    nom:"monObjet",
-    valeur:10
-};
 
+class Joueur {
+   constructor(nom){
+       this.nom = nom;
+       this.score=0;
+   }
+}
+
+let questions = ["Qui était le dieu de la guerre dans la mythologie grecque ?",
+            "Quel acteur américain incarne le héros du film de Christopher Nolan de 2014 « Interstellar » ?",
+            "Quel animal est « pan-pan » dans Bambi ?"
+            ];
+let  propositions = [
+               "A)Arès B)Hadès C)Hermès D)Apollon",
+               "A)Léonardo DiCaprio B)Brad Pitt C)Matthew MacConaughey D)Tom Cruise",
+               "A)Un chien B)Un cerf C)Un oiseau D)Un lapin"
+               ];
+           
+let reponses = ["Arès",
+               "Matthew MacConaughey",
+               "Un lapin"];
+           
 
 app.get('/',(req, res, next)=>{
    // res.sendFile('www/index.html');
-   res.render('index.ejs', {monObjet : monObjet});
+   res.render('game.ejs', {questions : questions});
 });
 
 app.get('/page2',(req, res, next)=>{
