@@ -36,6 +36,7 @@ let questions = ["Qui était le dieu de la guerre dans la mythologie grecque ?",
             "Quel acteur américain incarne le héros du film de Christopher Nolan de 2014 « Interstellar » ?",
             "Quel animal est « pan-pan » dans Bambi ?"
             ];
+            
 let  propositions = [
                "A)Arès B)Hadès C)Hermès D)Apollon",
                "A)Léonardo DiCaprio B)Brad Pitt C)Matthew MacConaughey D)Tom Cruise",

@@ -25,8 +25,18 @@ let  propositions = [
  let reponses = ["Arès",
             "Matthew MacConaughey",
             "Un lapin"];
+
+let nbjoueur = document.getElementById("nbrjoueur");
+let compteur = 1;
+
+while (compteur!=nbjoueur)
+{
+    <%-include('QandA');%>
+
+}
 */
 </script>
+<form method="post"> 
 <section class="question">
     <p><%=questions[0] %></p>
     <select>
@@ -61,5 +71,5 @@ let  propositions = [
 <section>
     <input type="submit" value="Répondre" id="repondre">
 </section>
-
+</form>
 <%- include('footer');%>
