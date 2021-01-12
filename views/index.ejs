@@ -1,6 +1,30 @@
 <%- include('header');%>
 
-<p> <%=monObjet.nom %></p>
-<p> <%=monObjet.valeur %></p>
+
+
+
+    <header>
+        <h2>The QUIZZ</h2>
+        <span></span>
+    </header>
+
+    <section>
+        <p>Combien de joueurs êtes-vous ?</p>
+        <form id="gameInit">
+            <input type="number" id="nbrjoueur" value="">
+            <input type="button" id="validCompteur" value="Valider">
+        </form>
+    </section>
+
+    <section>
+        <p>Comment vous appelez-vous ?</p>
+        <form>
+            <input type="text" id="nomjoueur" placeholder="nom du joueur" name="joueur" value="">
+            <input type="button" prop="" id="ajouter" value="Ajouter">
+            <a href="game"><input type="button" id="start" name="commencerJeu" value="Start Game"></a>
+        </form>
+    </section>
+
+    <div id="tabljoueur"></div>
 
 <%- include('footer');%>

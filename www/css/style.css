@@ -1,0 +1,10 @@
+html, body{
+    margin:0;
+    padding:0;
+}
+
+section{
+    justify-content : center;
+    width:80vw;
+    height:auto;
+}

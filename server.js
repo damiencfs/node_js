@@ -24,11 +24,6 @@ app.listen(port,()=>{
     console.log(`Serveur listening at http://localhost:${port}`);
 })
 
-let monObjet={
-    nom:"monObjet",
-    valeur:10
-};
-
 
 app.get('/',(req, res, next)=>{
    // res.sendFile('www/index.html');
@@ -40,7 +35,8 @@ app.get('/page2',(req, res, next)=>{
  });
  
  app.post('/page2',(req,res,next)=>{ //url que l'on tape 
-    console.log(req.body.name);
+    console.log(req.body.section.joueur.value);
+    res.render('page2.ejs');
  })
 
  app.use((req, res, next)=>{
