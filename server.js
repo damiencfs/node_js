@@ -39,11 +39,13 @@ app.get('/resultat',(req, res, next)=>{
    res.render('resultat.ejs');
 });
 
+app.get('/resultat',(req, res, next)=>{
+   res.render('resultat.ejs');
+});
 
 
-
-app.get('/page2',(req, res, next)=>{
-    res.render('page2.ejs');
+app.get('/calculpoints',(req, res, next)=>{
+    res.render('calculpoints.ejs');
  });
  
  app.post('/page2',(req,res,next)=>{ //url que l'on tape 

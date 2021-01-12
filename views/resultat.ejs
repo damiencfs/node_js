@@ -14,19 +14,19 @@
 
 
 var resultat = [
-{ name: "Edward", value: 3 },
-{ name: "wili", value: 12 },
-{ name: "Clement", value: 77 },
-{ name: "yo", value: 55 }];
+{ value: "Edward", score: 3 },
+{ value: "wili", score: 12 },
+{ value: "Clement", score: 77 },
+{ value: "yo", score: 55 }];
 
 resultat.sort(function (a, b) {
-  return b.value - a.value;
+  return b.score - a.score;
 });
 
 console.log(resultat);
 
 for (var i=0; i<resultat.length; i++) {
-  document.write('<p id="premier"> Place:' +(i+1)+ "</p><p>" +resultat[i].name+ " </p><p>Score:" +resultat[i].value+ "</p><br />");
+  document.write('<p id="premier"> Place:' +(i+1)+ "</p><p>" +resultat[i].value+ " </p><p>Score:" +resultat[i].score+ "</p><br />");
 }
 
 </script>
