@@ -43,6 +43,11 @@ app.get('/page2',(req, res, next)=>{
     console.log(req.body.name);
  })
 
+  //Ajout de la page correction
+  app.get('/correction',(req, res, next)=>{
+   res.render('correction.ejs');
+});
+
  app.use((req, res, next)=>{
     res.status(404).render('error.ejs');
  });
