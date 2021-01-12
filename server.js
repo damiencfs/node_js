@@ -35,6 +35,13 @@ app.get('/',(req, res, next)=>{
    res.render('index.ejs', {monObjet : monObjet});
 });
 
+app.get('/resultat',(req, res, next)=>{
+   res.render('resultat.ejs');
+});
+
+
+
+
 app.get('/page2',(req, res, next)=>{
     res.render('page2.ejs');
  });
