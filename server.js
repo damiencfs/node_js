@@ -52,15 +52,21 @@ app.get('/page2',(req, res, next)=>{
    res.render('questions.ejs');
 });
 
+// ROMAIN CLEMENT RECUPERATION RESULATS
 app.post('/questions',(req,res,next)=>{ //url que l'on tape 
-   console.log(req.body.q11);
-   console.log(req.body.q12);
-   console.log(req.body.q13);
-   console.log(req.body.q14);
+   console.log(req.body.q1);
    res.redirect('/questions');
+   let resultat_q1 = parseInt(req.body.q1);
+   let resultat_q2 = parseInt(req.body.q2);
+   let resultat_q3 = parseInt(req.body.q3);
+
+   let total = resultat_q1 + resultat_q2 + resultat_q3;
+   
+   console.log(total);
 })
 
- app.use((req, res, next)=>{
+
+app.use((req, res, next)=>{
     res.status(404).render('error.ejs');
  });
  
