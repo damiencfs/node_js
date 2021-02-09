@@ -26,6 +26,7 @@ app.listen(port,()=>{
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 class Joueur {
    constructor(nom){
        this.nom = nom;
@@ -49,6 +50,8 @@ let reponses = ["Arès",
                "Un lapin"];
            
 
+=======
+>>>>>>> 1cb239d3e676ce1f9d01221b134b9d3e84367222
 app.get('/',(req, res, next)=>{
    // res.sendFile('www/index.html');
    res.render('game.ejs', {questions : questions});
@@ -72,7 +75,31 @@ app.get('/calculpoints',(req, res, next)=>{
     res.render('page2.ejs');
  })
 
- app.use((req, res, next)=>{
+  //Ajout de la page correction
+  app.get('/correction',(req, res, next)=>{
+   res.render('correction.ejs');
+});
+
+  //Ajout de la page questions
+  app.get('/questions',(req, res, next)=>{
+   res.render('questions.ejs');
+});
+
+// ROMAIN CLEMENT RECUPERATION RESULATS
+app.post('/questions',(req,res,next)=>{ //url que l'on tape 
+   console.log(req.body.q1);
+   res.redirect('/questions');
+   let resultat_q1 = parseInt(req.body.q1);
+   let resultat_q2 = parseInt(req.body.q2);
+   let resultat_q3 = parseInt(req.body.q3);
+
+   let total = resultat_q1 + resultat_q2 + resultat_q3;
+   
+   console.log(total);
+})
+
+
+app.use((req, res, next)=>{
     res.status(404).render('error.ejs');
  });
  
