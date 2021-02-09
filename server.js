@@ -24,8 +24,6 @@ app.listen(port,()=>{
     console.log(`Serveur listening at http://localhost:${port}`);
 })
 
-<<<<<<< HEAD
-
 class Joueur {
    constructor(nom){
        this.nom = nom;
