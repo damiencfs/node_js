@@ -24,11 +24,6 @@ app.listen(port,()=>{
     console.log(`Serveur listening at http://localhost:${port}`);
 })
 
-app.get('/',(req, res, next)=>{
-   // res.sendFile('www/index.html');
-   res.render('game.ejs', {questions : questions});
-});
-
 app.get('/page2',(req, res, next)=>{
     res.render('page2.ejs');
  });
@@ -48,13 +43,18 @@ app.get('/page2',(req, res, next)=>{
    res.render('questions.ejs');
 });
 
+  //Ajout de la page questions
+  app.get('/',(req, res, next)=>{
+   res.render('index.ejs');
+});
+
 
 // RECUPERATION DU NOMBRE DE JOUEURS
 // RECUPERATION DES NOMS DES JOUEURS
-app.get('/',(req,res,next)=>{ //url que l'on tape 
-   
-   let nb_joueur = req.body.nb_joueur.value;
-   console.log(nb_joueur);
+app.post('/',(req,res,next)=>{ //url que l'on tape 
+   res.redirect('/questions');
+   let nb_joueur = req.body.nb_joueur;
+   console.log("Nombre de joueurs : "+nb_joueur);
 
 })
 

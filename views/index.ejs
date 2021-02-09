@@ -5,20 +5,18 @@
     </header>
 
     <section>
-        <p>Combien de joueurs êtes-vous ?</p>
-        <form id="gameInit">
+        
+        <form id="gameInit" method="post">
+            <p>Combien de joueurs êtes-vous ?</p>
             <input type="number" id="nbrjoueur" name ="nb_joueur" value="">
             <input type="button" id="validCompteur" value="Valider">
-        </form>
-    </section>
 
-    <section>
-        <p>Comment vous appelez-vous ?</p>
-        <form>
+            <p>Comment vous appelez-vous ?</p>
             <input type="text" id="nomjoueur" placeholder="nom du joueur" name="joueur" value="">
             <input type="button" prop="" id="ajouter" value="Ajouter">
-            <a href="questions"><input type="button" id="start" name="commencerJeu" value="Start Game"></a>
+            <input type="submit" id="start" name="commencerJeu" value="Start Game">
         </form>
+
     </section>
 
     <div id="tabljoueur"></div>
