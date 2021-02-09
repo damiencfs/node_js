@@ -25,6 +25,7 @@ app.listen(port,()=>{
 })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class Joueur {
@@ -52,10 +53,12 @@ let reponses = ["Arès",
 
 =======
 >>>>>>> 1cb239d3e676ce1f9d01221b134b9d3e84367222
+=======
+>>>>>>> 0bc9b0fa8f005a75ed8d70e9d09293b39ad390be
 app.get('/',(req, res, next)=>{
    // res.sendFile('www/index.html');
    res.render('game.ejs', {questions : questions});
-
+});
 
 app.get('/resultat',(req, res, next)=>{
    res.render('resultat.ejs');
@@ -85,6 +88,16 @@ app.get('/calculpoints',(req, res, next)=>{
    res.render('questions.ejs');
 });
 
+
+// RECUPERATION DU NOMBRE DE JOUEURS
+// RECUPERATION DES NOMS DES JOUEURS
+app.get('/',(req,res,next)=>{ //url que l'on tape 
+   
+   let nb_joueur = req.body.nb_joueur.value;
+   console.log(nb_joueur);
+
+})
+
 // ROMAIN CLEMENT RECUPERATION RESULATS
 app.post('/questions',(req,res,next)=>{ //url que l'on tape 
    console.log(req.body.q1);
@@ -95,11 +108,10 @@ app.post('/questions',(req,res,next)=>{ //url que l'on tape
 
    let total = resultat_q1 + resultat_q2 + resultat_q3;
    
-   console.log(total);
+   console.log(`Total de points : ${total}`);
 })
 
 
 app.use((req, res, next)=>{
     res.status(404).render('error.ejs');
  });
- 

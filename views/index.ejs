@@ -1,5 +1,8 @@
 <%- include('header');%>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0bc9b0fa8f005a75ed8d70e9d09293b39ad390be
     <header>
         <h2>The QUIZZ</h2>
         <span></span>
@@ -8,7 +11,7 @@
     <section>
         <p>Combien de joueurs êtes-vous ?</p>
         <form id="gameInit">
-            <input type="number" id="nbrjoueur" value="">
+            <input type="number" id="nbrjoueur" name ="nb_joueur" value="">
             <input type="button" id="validCompteur" value="Valider">
         </form>
     </section>
@@ -18,10 +21,51 @@
         <form>
             <input type="text" id="nomjoueur" placeholder="nom du joueur" name="joueur" value="">
             <input type="button" prop="" id="ajouter" value="Ajouter">
-            <a href="game"><input type="button" id="start" name="commencerJeu" value="Start Game"></a>
+            <a href="questions"><input type="button" id="start" name="commencerJeu" value="Start Game"></a>
         </form>
     </section>
 
     <div id="tabljoueur"></div>
 
+<<<<<<< HEAD
+=======
+    <script>
+        let nbrjoueur=document.getElementById("nbrjoueur");
+        let compteur=0;
+        $('#ajouter').prop("disabled", true);
+        $('#start').prop("disabled", true);
+    
+        let tableau_joueur = new Array();
+    
+        $("#validCompteur").click(function(){
+            console.log(nbrjoueur.value);
+            $('#ajouter').prop("disabled", false);
+            
+            tableau_joueur.length= nbrjoueur.value;
+        })
+    
+        let nomjoueur=document.getElementById("nomjoueur");
+        let tabljoueur=document.getElementById("tabljoueur");
+    
+    
+        $("#ajouter").click(function(){
+            console.log(compteur);
+            tabljoueur.insertAdjacentHTML('beforeend', nomjoueur.value+' - ');
+                
+            tableau_joueur[compteur]=nomjoueur.value;
+            
+            console.log(tableau_joueur);
+    
+            compteur++ ;
+    
+            // Affichage du bouton start game
+            if(compteur==nbrjoueur.value){
+                $('#ajouter').prop("disabled", true);
+                $('#start').prop("disabled", false);
+            };
+        }) 
+    
+    </script>
+
+>>>>>>> 0bc9b0fa8f005a75ed8d70e9d09293b39ad390be
 <%- include('footer');%>
