@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Les Resultats</title>
+</head>
+<body>
+
+
+<h1>Les Resultats</h1>
+
+<script>
+
+
+
+var resultat = [
+{ value: "Edward", score: 3 },
+{ value: "wili", score: 12 },
+{ value: "Clement", score: 77 },
+{ value: "yo", score: 55 }];
+
+resultat.sort(function (a, b) {
+  return b.score - a.score;
+});
+
+console.log(resultat);
+
+for (var i=0; i<resultat.length; i++) {
+  document.write('<p id="premier"> Place:' +(i+1)+ "</p><p>" +resultat[i].value+ " </p><p>Score:" +resultat[i].score+ "</p><br />");
+}
+
+</script>
+
+
+
+
+
+<style>
+H1{
+Color:orange;
+}
+
+p{
+font-style: italic;
+}
+
+#premier{
+color:red;
+font-style: normal;
+}
+
+</style>
+
+
+</body>
+</html>
