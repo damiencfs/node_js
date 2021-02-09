@@ -4,25 +4,38 @@
     $('#ajouter').prop("disabled", true);
     $('#start').prop("disabled", true);
 
+    let tableau_joueur = new Array();
+
     $("#validCompteur").click(function(){
         console.log(nbrjoueur.value);
         $('#ajouter').prop("disabled", false);
+        
+        tableau_joueur.length= nbrjoueur.value;
     })
 
     let nomjoueur=document.getElementById("nomjoueur");
     let tabljoueur=document.getElementById("tabljoueur");
 
-    $("#ajouter").click(function(){
-        compteur++ ;
-        console.log(nomjoueur.value);
-        tabljoueur.insertAdjacentHTML('beforeend', nomjoueur.value+' - ');
-        console.log(compteur);
 
+    $("#ajouter").click(function(){
+        console.log(compteur);
+        tabljoueur.insertAdjacentHTML('beforeend', nomjoueur.value+' - ');
+            
+        tableau_joueur[compteur]=nomjoueur.value;
+        
+        console.log(tableau_joueur);
+
+        compteur++ ;
+
+        // Affichage du bouton start game
         if(compteur==nbrjoueur.value){
             $('#ajouter').prop("disabled", true);
             $('#start').prop("disabled", false);
         };
-    })  
+    }) 
+
+ 
+ 
 
 </script>
 
