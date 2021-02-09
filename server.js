@@ -25,6 +25,7 @@ app.listen(port,()=>{
 })
 
 
+
 class Joueur {
    constructor(nom){
        this.nom = nom;
@@ -51,6 +52,12 @@ let reponses = ["Arès",
 app.get('/',(req, res, next)=>{
    // res.sendFile('www/index.html');
    res.render('game.ejs', {questions : questions});
+
+
+app.get('/',(req, res, next)=>{
+   // res.sendFile('www/index.html');
+   res.render('index.ejs');
+
 });
 
 app.get('/page2',(req, res, next)=>{
@@ -58,7 +65,8 @@ app.get('/page2',(req, res, next)=>{
  });
  
  app.post('/page2',(req,res,next)=>{ //url que l'on tape 
-    console.log(req.body.name);
+    console.log(req.body.section.joueur.value);
+    res.render('page2.ejs');
  })
 
  app.use((req, res, next)=>{

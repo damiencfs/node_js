@@ -1,3 +1,32 @@
+<script>
+    let nbrjoueur=document.getElementById("nbrjoueur");
+    let compteur=0;
+    $('#ajouter').prop("disabled", true);
+    $('#start').prop("disabled", true);
+
+    $("#validCompteur").click(function(){
+        console.log(nbrjoueur.value);
+        $('#ajouter').prop("disabled", false);
+    })
+
+    let nomjoueur=document.getElementById("nomjoueur");
+    let tabljoueur=document.getElementById("tabljoueur");
+
+    $("#ajouter").click(function(){
+        compteur++ ;
+        console.log(nomjoueur.value);
+        tabljoueur.insertAdjacentHTML('beforeend', nomjoueur.value+' - ');
+        console.log(compteur);
+
+        if(compteur==nbrjoueur.value){
+            $('#ajouter').prop("disabled", true);
+            $('#start').prop("disabled", false);
+        };
+    })  
+
+</script>
+
 </body>
 <script src="js/main.js"></script>
+
 </html>
