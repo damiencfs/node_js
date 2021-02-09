@@ -36,40 +36,6 @@ while (compteur!=nbjoueur)
 }
 */
 </script>
-<form method="post"> 
-<section class="question">
-    <p><%=questions[0] %></p>
-    <select>
-        <option value="1"> A) Arès</option>
-        <option value="0"> B) Hadès</option>
-        <option value="0"> C) Hermès</option>
-        <option value="0"> D) Apollon</option>
-    </select>
+<%-include('QandA');%>
 
-</section>
-<br/>
-<section class="question">
-    <p><%=questions[1] %></p>
-    <select>
-        <option value="0"> A)Léonardo DiCaprio</option>
-        <option value="0"> B)Brad Pitt</option>
-        <option value="1"> C)Matthew MacConaughey</option>
-        <option value="0"> D)Tom Cruise</option>
-    </select>
-</section>
-<br/>
-<section class="question">
-    <p><%=questions[2] %></p>
-    <select>
-        <option value="0"> A)Un chien</option>
-        <option value="0"> B)Un cerf</option>
-        <option value="0"> C)Un oiseau</option>
-        <option value="1"> D)Un lapin</option>
-    </select>
-</section>
-<br/>
-<section>
-    <input type="submit" value="Répondre" id="repondre">
-</section>
-</form>
 <%- include('footer');%>
