@@ -1,0 +1,13 @@
+html, body{
+    margin:0;
+    padding:0;
+}
+h2{
+    font-family: 'Fugaz One', cursive;
+}
+
+section{
+    justify-content : center;
+    width:80vw;
+    height:auto;
+}

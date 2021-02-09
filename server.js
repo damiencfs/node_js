@@ -24,6 +24,7 @@ app.listen(port,()=>{
     console.log(`Serveur listening at http://localhost:${port}`);
 })
 
+<<<<<<< HEAD
 
 class Joueur {
    constructor(nom){
@@ -51,14 +52,15 @@ let reponses = ["Arès",
 app.get('/',(req, res, next)=>{
    // res.sendFile('www/index.html');
    res.render('game.ejs', {questions : questions});
-});
+
 
 app.get('/page2',(req, res, next)=>{
     res.render('page2.ejs');
  });
  
  app.post('/page2',(req,res,next)=>{ //url que l'on tape 
-    console.log(req.body.name);
+    console.log(req.body.section.joueur.value);
+    res.render('page2.ejs');
  })
 
  app.use((req, res, next)=>{
