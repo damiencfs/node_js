@@ -42,10 +42,7 @@ app.get('/resultat',(req, res, next)=>{
    res.render('correction.ejs');
 });
 
-  //Ajout de la page questions
-  app.get('/questions',(req, res, next)=>{
-   res.render('questions.ejs');
-});
+
 
   //Ajout de la page questions
   app.get('/',(req, res, next)=>{
@@ -62,10 +59,17 @@ app.post('/',(req,res,next)=>{ //url que l'on tape
 
 })
 
-// ROMAIN CLEMENT RECUPERATION RESULATS
-app.post('/questions',(req,res,next)=>{ //url que l'on tape 
-   console.log(req.body.q1);
-   res.redirect('/questions');
+  //Ajout de la page questions
+  app.get('/questions',(req, res, next)=>{
+   res.render('questions.ejs'),{
+      nb_joueur:nb_joueur
+   };
+});
+
+app.post('/questions',(req,res,next)=>{
+   res.redirect('/correction');
+
+   // ROMAIN CLEMENT RECUPERATION RESULATS
    let resultat_q1 = parseInt(req.body.q1);
    let resultat_q2 = parseInt(req.body.q2);
    let resultat_q3 = parseInt(req.body.q3);
@@ -74,6 +78,7 @@ app.post('/questions',(req,res,next)=>{ //url que l'on tape
    
    console.log(`Total de points : ${total}`);
 })
+
 
 
 app.use((req, res, next)=>{

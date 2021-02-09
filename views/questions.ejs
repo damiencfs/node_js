@@ -3,21 +3,13 @@
 <h2>Questions</h2>
 
 <form action="/questions" method="post">
-      <fieldset>
             <h3>Question 1</h3>
             <p>1. Qui était le dieu de la guerre dans la mythologie grecque ?</p>
 
-            <div class="question1">
-                  <select name="q1">
-                        <option id="q11" value="1">Arès</option>
-                        <option id="q12" value="0">Hadès</option>
-                        <option id="q13" value="0">Hermès</option>
-                        <option id="q14" value="0">Apollon</option>
-                  </select>
+            <div id="question1">
+                  <select name="q1"><option id="q11" value="1">Arès</option><option id="q12" value="0">Hadès</option><option id="q13" value="0">Hermès</option><option id="q14" value="0">Apollon</option></select>
             </div>
-            
-            
-            <br/>
+                  
             <br/>
 
             <h3>Question 2</h3>
@@ -28,7 +20,7 @@
                   <option id="q13" value="1">Matthew MacConaughey</option>
                   <option id="q14" value="0">Tom Cruise</option>
             </select>
-            <br/>
+
             <br/>
 
             <h3>Question 3</h3>
@@ -39,19 +31,17 @@
                   <option id="q13" value="0">Un oiseau</option>
                   <option id="q14" value="1">Un lapin</option>
             </select>
+
             <br/>
-            <br/>
-      </fieldset>
-
-
-
-
       <input type="submit" id="repondre" value="Valider">
 </form>
 
-
 <script>
-
+      //BOUCLE QUESTIONS
+   let q1= document.getElementById("question1");
+   for(var i=0; i< 3; i++){
+      q1.innerHTML='<select name="q1"><option id="q11" value="1">Arès</option><option id="q12" value="0">Hadès</option><option id="q13" value="0">Hermès</option><option id="q14" value="0">Apollon</option></select>';
+   }
 </script>
 
 <%- include('footer');%>
