@@ -50,7 +50,7 @@ let reponses = ["Arès",
 app.get('/',(req, res, next)=>{
    // res.sendFile('www/index.html');
    res.render('game.ejs', {questions : questions});
-
+});
 
 app.get('/page2',(req, res, next)=>{
     res.render('page2.ejs');
