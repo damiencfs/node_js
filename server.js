@@ -26,7 +26,11 @@ app.listen(port,()=>{
 
 app.get('/page2',(req, res, next)=>{
     res.render('page2.ejs');
- });
+});
+
+app.get('/resultat',(req, res, next)=>{
+   res.render('resultat.ejs');
+});
  
  app.post('/page2',(req,res,next)=>{ //url que l'on tape 
     console.log(req.body.section.joueur.value);
